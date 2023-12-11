@@ -3,7 +3,7 @@ import { CheckCircleIcon } from "@heroicons/react/24/solid";
 export default function WorkTimeline() {
   return (
     <>
-      <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
+      <ul className="timeline  max-md:timeline-compact timeline-vertical">
         <li>
           <div className="timeline-middle">
             <CheckCircleIcon className="h-6 w-6 text-primary" />
@@ -50,7 +50,7 @@ export default function WorkTimeline() {
           <div className="timeline-middle">
             <CheckCircleIcon className="h-6 w-6 text-primary" />
           </div>
-          <div className="timeline-start md:text-end mb-10 bg-primary text-primary-content rounded-xl p-4">
+          <div className="timeline-start md:text-end mb-10 bg-primary text-primary-content rounded-xl p-4 ">
             <time className="font-mono italic">October 2023 - Present</time>
             <div className="text-xl font-black underline">
               Frontend Web Developer - TeammateMe
