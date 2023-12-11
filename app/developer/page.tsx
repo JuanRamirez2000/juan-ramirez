@@ -1,14 +1,20 @@
 import DeveloperHero from "./DeveloperHero";
+import ProjectSection from "./ProjectSection";
 import WorkTimeline from "./WorkTimeline";
 
 export default function Developer() {
   return (
     <main>
-      <section className="h-screen">
-        <div className="h-full w-full flex flex-col items-center justify-center">
+      <section className="h-screen ">
+        <div className="h-full w-full">
           <DeveloperHero />
         </div>
-        <WorkTimeline />
+        <div className="h-full w-full">
+          <WorkTimeline />
+        </div>
+        <div className="h-full w-full">
+          <ProjectSection />
+        </div>
       </section>
     </main>
   );

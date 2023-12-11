@@ -2,8 +2,11 @@ import { CheckCircleIcon } from "@heroicons/react/24/solid";
 
 export default function WorkTimeline() {
   return (
-    <>
-      <ul className="timeline  max-md:timeline-compact timeline-vertical">
+    <div className="flex flex-col gap-12 text-center h-full w-full relative">
+      <h2 className="text-4xl md:text-5xl">
+        My <span className="text-primary">work experience</span> in a nutshell
+      </h2>
+      <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
         <li>
           <div className="timeline-middle">
             <CheckCircleIcon className="h-6 w-6 text-primary" />
@@ -50,7 +53,7 @@ export default function WorkTimeline() {
           <div className="timeline-middle">
             <CheckCircleIcon className="h-6 w-6 text-primary" />
           </div>
-          <div className="timeline-start md:text-end mb-10 bg-primary text-primary-content rounded-xl p-4 ">
+          <div className="timeline-start md:text-end  bg-primary text-primary-content rounded-xl p-4 ">
             <time className="font-mono italic">October 2023 - Present</time>
             <div className="text-xl font-black underline">
               Frontend Web Developer - TeammateMe
@@ -66,6 +69,6 @@ export default function WorkTimeline() {
           </div>
         </li>
       </ul>
-    </>
+    </div>
   );
 }
