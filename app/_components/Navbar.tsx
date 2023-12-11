@@ -17,7 +17,7 @@ export default function Navbar() {
     <div className="navbar bg-primary text-primary-content">
       <div className="navbar-start">
         <div className="dropdown">
-          <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+          <div tabIndex={0} role="button" className="btn btn-ghost md:hidden">
             <Bars3CenterLeftIcon className="w-6 h-6" />
           </div>
           <ul
@@ -27,7 +27,12 @@ export default function Navbar() {
             <li>
               <Link
                 href={"/developer"}
-                className={`${pathName === "/developer" ? "bg-secondary" : ""}`}
+                className={`tooltip tooltip-bottom ${
+                  pathName === "/developer"
+                    ? "border-l-2 border-secondary rounded-l-none"
+                    : ""
+                }`}
+                data-tip="developer"
               >
                 <CodeBracketIcon className={"w-6 h-6"} />
               </Link>
@@ -35,9 +40,12 @@ export default function Navbar() {
             <li>
               <Link
                 href={"/photographer"}
-                className={`${
-                  pathName === "/photographer" ? "bg-secondary" : ""
+                className={`tooltip tooltip-bottom ${
+                  pathName === "/photographer"
+                    ? "border-l-2 border-secondary rounded-l-none"
+                    : ""
                 }`}
+                data-tip="photographer"
               >
                 <CameraIcon className="w-6 h-6" />
               </Link>
@@ -51,22 +59,30 @@ export default function Navbar() {
         </div>
         <p className="text-3xl font-medium">Juan Ramirez</p>
       </div>
-      <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
+      <div className="navbar-center hidden md:flex">
+        <ul className="menu menu-horizontal px-1 rounded-box bg-base-300 text-base-content">
           <li>
             <Link
               href={"/developer"}
-              className={`${pathName === "/developer" ? "bg-secondary" : ""}`}
+              className={`tooltip tooltip-bottom ${
+                pathName === "/developer"
+                  ? "border-b-2 border-secondary rounded-b-none"
+                  : ""
+              }`}
+              data-tip="developer"
             >
               <CodeBracketIcon className="w-6 h-6" />
             </Link>
           </li>
-          <li>
+          <li className="relative">
             <Link
               href={"/photographer"}
-              className={`${
-                pathName === "/photographer" ? "bg-secondary" : ""
+              className={`tooltip tooltip-bottom ${
+                pathName === "/photographer"
+                  ? "border-b-2 border-secondary rounded-b-none"
+                  : ""
               }`}
+              data-tip="photographer"
             >
               <CameraIcon className="w-6 h-6" />
             </Link>
