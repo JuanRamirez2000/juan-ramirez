@@ -8,7 +8,7 @@ export default function WorkTimeline() {
           <div className="timeline-middle">
             <CheckCircleIcon className="h-6 w-6 text-primary" />
           </div>
-          <div className="timeline-start md:text-end mb-10">
+          <div className="timeline-start md:text-end mb-10 bg-neutral text-neutral-content rounded-xl p-4">
             <time className="font-mono italic">Jan 2021 - Sep 2022</time>
             <div className="text-xl font-black underline decoration-secondary">
               Research Assistant - CSUF
@@ -21,14 +21,14 @@ export default function WorkTimeline() {
               the team&apos;s research findings
             </p>
           </div>
-          <hr />
+          <hr className="bg-secondary" />
         </li>
         <li>
-          <hr />
+          <hr className="bg-secondary" />
           <div className="timeline-middle">
             <CheckCircleIcon className="h-6 w-6 text-primary" />
           </div>
-          <div className="timeline-end mb-10">
+          <div className="timeline-end md:text-end mb-10 bg-neutral text-neutral-content rounded-xl p-4">
             <time className="font-mono italic">Jan 2023 - October 2023</time>
             <div className="text-xl font-black underline decoration-secondary">
               Fullstack Developer - Relion
@@ -43,23 +43,25 @@ export default function WorkTimeline() {
               tickets.
             </p>
           </div>
-          <hr />
+          <hr className="bg-secondary" />
         </li>
         <li>
-          <hr />
+          <hr className="bg-secondary" />
           <div className="timeline-middle">
             <CheckCircleIcon className="h-6 w-6 text-primary" />
           </div>
-          <div className="timeline-start md:text-end mb-10">
+          <div className="timeline-start md:text-end mb-10 bg-primary text-primary-content rounded-xl p-4">
             <time className="font-mono italic">October 2023 - Present</time>
-            <div className="text-xl font-black underline decoration-secondary">
+            <div className="text-xl font-black underline">
               Frontend Web Developer - TeammateMe
             </div>
             <p className="max-w-md">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam
-              culpa nisi reprehenderit adipisci, iste provident consequatur!
-              Neque suscipit voluptas sunt vitae ex, rem facere fugit voluptates
-              veniam, at, accusamus repellat?
+              My focus with TeammateMe was to help develop new features for the
+              company. I focused mainly on technical problems while implementing
+              UI designed by the design team. Currently, my most impactful
+              projects were setting up Mixpanel to track users across the app
+              for and AB testing and creating features for an internal admin
+              panel used by the company.
             </p>
           </div>
         </li>
