@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/solid";
+import { motion } from "framer-motion";
 
 type BadgeVariants = "Frontend" | "Backend" | "Infra";
 
@@ -22,11 +22,8 @@ type ProjectType = {
 type Projects = ProjectType[];
 
 export default function ProjectSection() {
-  const [largeCardID, setLardCardID] = useState<number>(1);
-
-  const largeCard = projectsData.find((project) => project.id === largeCardID);
-  const smallCards = projectsData.filter(
-    (project) => project.id !== largeCardID
+  const [selectedProject, setSelectedProject] = useState<ProjectType>(
+    projectsData[0]
   );
 
   return (
@@ -34,29 +31,39 @@ export default function ProjectSection() {
       <h2 className="text-4xl md:text-5xl">
         Some <span className="text-primary">projects</span> that I am working on
       </h2>
-      <div className="w-4/5 h-4/5 flex flex-row justify-center">
-        <ul className="grid grid-cols-1 grid-rows-5 md:grid-cols-2 md:grid-rows-3 w-full h-full max-w-8xl gap-6">
-          <li className="md:row-span-3 row-span-2 col-span-1  p-8 bg-primary rounded-lg text-primary-content">
-            <div className="flex flex-row justify-between items-center">
-              <h1 className="text-3xl font-semibold underline decoration-secondary">
-                {largeCard?.name}
-              </h1>
-              <Link href={""} target="_blank">
-                <ArrowTopRightOnSquareIcon className="h-10 w-10 bg-secondary p-2 rounded-lg hover:text-secondary-content hover:scale-125 transition duration-150 " />
-              </Link>
-            </div>
-          </li>
-          {smallCards.map((project) => {
-            return (
-              <li
-                className="row-span-1 col-span-1 bg-neutral text-netrual-content rounded-lg p-8 cursor-pointer hover:text-secondary-content hover:bg-secondary transition-all hover:scale-105"
-                key={project.id}
-                onClick={() => setLardCardID(project.id)}
+      <div className="w-4/5 h-4/6 flex flex-row justify-center">
+        <ul className="grid grid-cols-1 grid-rows-5 md:grid-cols-2 md:grid-rows-3 w-full h-full max-w-6xl gap-6">
+          {projectsData.map((project) => (
+            <motion.li
+              key={project.id}
+              className={`rounded-xl p-6 flex flex-col gap-4
+                ${
+                  selectedProject.id === project.id
+                    ? "bg-primary text-primary-content row-span-2 col-span-1 md:row-span-full"
+                    : "bg-neutral text-neutral-content md:col-start-2 col-span-1 row-span-1 "
+                }
+                `}
+              onClick={() => setSelectedProject(project)}
+              layout
+            >
+              <h1
+                className={
+                  selectedProject.id === project.id
+                    ? "text-4xl tracking-tight font-semibold underline decoration-secondary"
+                    : "text-xl"
+                }
               >
                 {project.name}
-              </li>
-            );
-          })}
+              </h1>
+              <p
+                className={
+                  selectedProject.id === project.id ? "text-lg" : "hidden"
+                }
+              >
+                {project.description}
+              </p>
+            </motion.li>
+          ))}
         </ul>
       </div>
     </div>
