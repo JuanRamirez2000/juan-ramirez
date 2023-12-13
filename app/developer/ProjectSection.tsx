@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { LinkIcon } from "@heroicons/react/24/outline";
 
 type BadgeVariants = "Frontend" | "Backend" | "Infra";
 
@@ -16,7 +17,7 @@ type ProjectType = {
   name: string;
   description: string;
   badges?: Badge[];
-  links?: string;
+  link: string;
 };
 
 type Projects = ProjectType[];
@@ -46,15 +47,24 @@ export default function ProjectSection() {
               onClick={() => setSelectedProject(project)}
               layout
             >
-              <h1
-                className={
-                  selectedProject.id === project.id
-                    ? "text-xl md:text-4xl tracking-tight font-semibold underline decoration-secondary"
-                    : "md:text-2xl"
-                }
-              >
-                {project.name}
-              </h1>
+              <div className="flex flex-row justify-between">
+                <h1
+                  className={
+                    selectedProject.id === project.id
+                      ? "text-xl md:text-4xl tracking-tight font-semibold underline decoration-secondary"
+                      : "md:text-2xl"
+                  }
+                >
+                  {project.name}
+                </h1>
+                <Link
+                  href={project.link}
+                  target="_blank"
+                  className="p-1 rounded-lg bg-info text-info-content transition-all hover:scale-125"
+                >
+                  <LinkIcon className="h-8 w-8" />
+                </Link>
+              </div>
               <p
                 className={
                   selectedProject.id === project.id ? "md:text-lg" : "hidden"
@@ -99,6 +109,7 @@ const projectsData: Projects = [
     name: "Roadtrip Music",
     description:
       "A tool that combines Google Maps data alongside the Spotify Web API to generate songs based on the time it takes to get from point A to point B",
+    link: "https://github.com/JuanRamirez2000/RoadtripMusic",
     badges: [
       {
         name: "ReactJS",
@@ -143,6 +154,7 @@ const projectsData: Projects = [
     name: "Couple's Dashboard",
     description:
       "A website to bring together couples by giving them a dashboard to store notes such as date plans, events, gift ideas, and bucket lists (currently refactoring to a different backend)",
+    link: "https://github.com/JuanRamirez2000/CouplesDashboard",
     badges: [
       {
         name: "ReactJS",
@@ -182,6 +194,7 @@ const projectsData: Projects = [
     id: 2,
     name: "Tina's Website",
     description: "A website built for the amazing model Tina",
+    link: "https://github.com/JuanRamirez2000",
     badges: [
       {
         name: "ReactJS",
@@ -214,6 +227,7 @@ const projectsData: Projects = [
     name: "Frontend Mentor Challenges",
     description:
       "A website to showcase your music taste as a beautiful landscape gradient",
+    link: "https://www.frontendmentor.io/profile/JuanRamirez2000",
     badges: [
       {
         name: "ReactJS",

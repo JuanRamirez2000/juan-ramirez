@@ -45,7 +45,7 @@ export default function DeveloperHero() {
             </li>
             <li>
               <Link
-                href=""
+                href="/assets/files/resume.pdf"
                 target="_blank"
                 className="tooltip tooltip-bottom tooltip-info"
                 data-tip="Resume"

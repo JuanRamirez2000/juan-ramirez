@@ -3,7 +3,7 @@
 import {
   CodeBracketIcon,
   CameraIcon,
-  EnvelopeIcon,
+  DocumentTextIcon,
   Bars3CenterLeftIcon,
 } from "@heroicons/react/24/outline";
 import Link from "next/link";
@@ -27,12 +27,11 @@ export default function Navbar() {
             <li>
               <Link
                 href={"/developer"}
-                className={`tooltip tooltip-bottom flex flex-row ${
+                className={`flex flex-row ${
                   pathName === "/developer"
                     ? "border-l-2 border-secondary rounded-l-none"
                     : ""
                 }`}
-                data-tip="developer"
               >
                 <CodeBracketIcon className={"w-6 h-6"} />
                 <p className="text-lg">Developer</p>
@@ -41,21 +40,24 @@ export default function Navbar() {
             <li>
               <Link
                 href={"/photographer"}
-                className={`tooltip tooltip-bottom flex flex-row ${
+                className={`flex flex-row ${
                   pathName === "/photographer"
                     ? "border-l-2 border-secondary rounded-l-none"
                     : ""
                 }`}
-                data-tip="photographer"
               >
                 <CameraIcon className="w-6 h-6" />
                 <p className="text-lg">Photographer</p>
               </Link>
             </li>
             <li>
-              <Link href={"/"} className="flex flex-row">
-                <EnvelopeIcon className="w-6 h-6" />
-                <p className="text-lg">Contact</p>
+              <Link
+                href={"/assets/files/resume.pdf"}
+                className="flex flex-row"
+                target="_blank"
+              >
+                <DocumentTextIcon className="w-6 h-6" />
+                <p className="text-lg">Resume</p>
               </Link>
             </li>
           </ul>
@@ -91,8 +93,13 @@ export default function Navbar() {
             </Link>
           </li>
           <li>
-            <Link href={"/"}>
-              <EnvelopeIcon className="w-6 h-6" />
+            <Link
+              href={"/assets/files/resume.pdf"}
+              className="tooltip tooltip-bottom"
+              data-tip="resume"
+              target="_blank"
+            >
+              <DocumentTextIcon className="w-6 h-6" />
             </Link>
           </li>
         </ul>
