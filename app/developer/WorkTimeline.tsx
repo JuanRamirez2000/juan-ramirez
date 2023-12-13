@@ -3,7 +3,7 @@ import { CheckCircleIcon } from "@heroicons/react/24/solid";
 export default function WorkTimeline() {
   return (
     <div className="flex flex-col gap-12 items-center h-full w-full relative">
-      <h2 className="text-4xl md:text-5xl">
+      <h2 className="text-center md:text-left text-3xl md:text-5xl">
         My <span className="text-primary">work experience</span> in a nutshell
       </h2>
       <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">

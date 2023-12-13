@@ -9,7 +9,7 @@ export default function Developer() {
         <div className="h-full w-full">
           <DeveloperHero />
         </div>
-        <div className="h-full w-full">
+        <div className="md:h-full w-full h-fit">
           <WorkTimeline />
         </div>
         <div className="h-full w-full">

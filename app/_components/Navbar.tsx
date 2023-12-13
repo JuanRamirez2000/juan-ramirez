@@ -18,16 +18,16 @@ export default function Navbar() {
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost md:hidden">
-            <Bars3CenterLeftIcon className="w-6 h-6" />
+            <Bars3CenterLeftIcon className="w-8 h-8" />
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-primary rounded-box w-16"
+            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-neutral text-neutral-content rounded-box w-fit"
           >
             <li>
               <Link
                 href={"/developer"}
-                className={`tooltip tooltip-bottom ${
+                className={`tooltip tooltip-bottom flex flex-row ${
                   pathName === "/developer"
                     ? "border-l-2 border-secondary rounded-l-none"
                     : ""
@@ -35,12 +35,13 @@ export default function Navbar() {
                 data-tip="developer"
               >
                 <CodeBracketIcon className={"w-6 h-6"} />
+                <p className="text-lg">Developer</p>
               </Link>
             </li>
             <li>
               <Link
                 href={"/photographer"}
-                className={`tooltip tooltip-bottom ${
+                className={`tooltip tooltip-bottom flex flex-row ${
                   pathName === "/photographer"
                     ? "border-l-2 border-secondary rounded-l-none"
                     : ""
@@ -48,16 +49,18 @@ export default function Navbar() {
                 data-tip="photographer"
               >
                 <CameraIcon className="w-6 h-6" />
+                <p className="text-lg">Photographer</p>
               </Link>
             </li>
             <li>
-              <Link href={"/"}>
+              <Link href={"/"} className="flex flex-row">
                 <EnvelopeIcon className="w-6 h-6" />
+                <p className="text-lg">Contact</p>
               </Link>
             </li>
           </ul>
         </div>
-        <p className="text-3xl font-medium">Juan Ramirez</p>
+        <p className="text-xl md:text-3xl font-medium">Juan Ramirez</p>
       </div>
       <div className="navbar-center hidden md:flex">
         <ul className="menu menu-horizontal px-1 rounded-box bg-base-300 text-base-content">

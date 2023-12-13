@@ -27,20 +27,20 @@ export default function ProjectSection() {
   );
 
   return (
-    <div className="flex flex-col gap-6 w-full h-full relative items-center justify-center">
-      <h2 className="text-4xl md:text-5xl">
+    <div className="flex flex-col gap-6 w-full h-full items-center justify-center">
+      <h2 className="text-center md:text-left text-3xl md:text-5xl">
         Some <span className="text-primary">projects</span> that I am working on
       </h2>
       <div className="w-4/5 h-4/6 flex flex-row justify-center">
-        <ul className="grid grid-cols-1 grid-rows-5 md:grid-cols-2 md:grid-rows-3 w-full h-full max-w-6xl gap-6">
+        <ul className="flex flex-col md:grid md:grid-cols-2 md:grid-rows-3 w-full h-full max-w-6xl gap-6">
           {projectsData.map((project) => (
             <motion.li
               key={project.id}
               className={`rounded-xl p-6 flex flex-col gap-4
                 ${
                   selectedProject.id === project.id
-                    ? "bg-primary text-primary-content row-span-2 col-span-1 md:row-span-full"
-                    : "hover:bg-secondary hover:text-secondary-content bg-neutral text-neutral-content md:col-start-2 col-span-1 row-span-1 cursor-pointer"
+                    ? "bg-primary text-primary-content md:col-span-1 md:row-span-full grow"
+                    : "hover:bg-secondary hover:text-secondary-content bg-neutral text-neutral-content md:col-start-2 md:col-span-1 md:row-span-1 cursor-pointer grow-0"
                 }
                 `}
               onClick={() => setSelectedProject(project)}
@@ -49,15 +49,15 @@ export default function ProjectSection() {
               <h1
                 className={
                   selectedProject.id === project.id
-                    ? "text-4xl tracking-tight font-semibold underline decoration-secondary"
-                    : "text-xl"
+                    ? "text-xl md:text-4xl tracking-tight font-semibold underline decoration-secondary"
+                    : "md:text-2xl"
                 }
               >
                 {project.name}
               </h1>
               <p
                 className={
-                  selectedProject.id === project.id ? "text-lg" : "hidden"
+                  selectedProject.id === project.id ? "md:text-lg" : "hidden"
                 }
               >
                 {project.description}
@@ -66,7 +66,7 @@ export default function ProjectSection() {
                 {project.badges?.map((badge, index) => (
                   <p
                     key={index}
-                    className={`px-1.5 py-0.5 rounded-2xl ${grabBadgeColorFromVariant(
+                    className={`text-sm md:text-base px-1.5 py-0.5 rounded-2xl ${grabBadgeColorFromVariant(
                       badge.variant
                     )}`}
                   >
@@ -105,6 +105,10 @@ const projectsData: Projects = [
         variant: "Frontend",
       },
       {
+        name: "TypeScript",
+        variant: "Frontend",
+      },
+      {
         name: "TailwindCSS",
         variant: "Frontend",
       },
@@ -114,6 +118,10 @@ const projectsData: Projects = [
       },
       {
         name: "NextJS",
+        variant: "Backend",
+      },
+      {
+        name: "AuthJS",
         variant: "Backend",
       },
       {
@@ -141,6 +149,10 @@ const projectsData: Projects = [
         variant: "Frontend",
       },
       {
+        name: "TypeScript",
+        variant: "Frontend",
+      },
+      {
         name: "TailwindCSS",
         variant: "Frontend",
       },
@@ -149,7 +161,19 @@ const projectsData: Projects = [
         variant: "Backend",
       },
       {
+        name: "AuthJS",
+        variant: "Backend",
+      },
+      {
         name: "Vercel",
+        variant: "Infra",
+      },
+      {
+        name: "PrismaORM",
+        variant: "Infra",
+      },
+      {
+        name: "Supabase",
         variant: "Infra",
       },
     ],
@@ -164,7 +188,15 @@ const projectsData: Projects = [
         variant: "Frontend",
       },
       {
+        name: "TypeScript",
+        variant: "Frontend",
+      },
+      {
         name: "TailwindCSS",
+        variant: "Frontend",
+      },
+      {
+        name: "Framer Motion",
         variant: "Frontend",
       },
       {
@@ -179,12 +211,24 @@ const projectsData: Projects = [
   },
   {
     id: 3,
-    name: "Spotify Landscapes",
+    name: "Frontend Mentor Challenges",
     description:
       "A website to showcase your music taste as a beautiful landscape gradient",
     badges: [
       {
         name: "ReactJS",
+        variant: "Frontend",
+      },
+      {
+        name: "TypeScript",
+        variant: "Frontend",
+      },
+      {
+        name: "Svelte",
+        variant: "Frontend",
+      },
+      {
+        name: "SCSS",
         variant: "Frontend",
       },
       {
@@ -194,10 +238,6 @@ const projectsData: Projects = [
       {
         name: "NextJS",
         variant: "Backend",
-      },
-      {
-        name: "Spotify Web API",
-        variant: "Infra",
       },
       {
         name: "Vercel",

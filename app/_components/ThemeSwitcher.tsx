@@ -9,7 +9,7 @@ export default function ThemeSwitcher() {
       </div>
       <ul
         tabIndex={0}
-        className="menu dropdown-content z-[1] p-2 shadow-2xl bg-base-300 rounded-box w-32"
+        className="menu dropdown-content z-[1] p-2 shadow-2xl bg-neutral text-neutral-content rounded-box w-32"
       >
         <li>
           <input
