@@ -25,17 +25,8 @@ export default function ThemeSwitcher() {
             type="radio"
             name="theme-dropdown"
             className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-            aria-label="Emerald"
-            value="emerald"
-          />
-        </li>
-        <li>
-          <input
-            type="radio"
-            name="theme-dropdown"
-            className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-            aria-label="Forest"
-            value="forest"
+            aria-label="Pastel"
+            value="pastel"
           />
         </li>
       </ul>

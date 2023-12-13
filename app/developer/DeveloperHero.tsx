@@ -26,7 +26,7 @@ export default function DeveloperHero() {
               >
                 <FontAwesomeIcon
                   icon={faGithub}
-                  className="h-16 w-16 bg-primary text-primary-content p-2 rounded-lg hover:bg-secondary hover:text-secondary-content hover:scale-105 transition duration-150"
+                  className=" h-12 w-12 md:h-16 md:w-16 bg-primary text-primary-content p-2 rounded-lg hover:bg-secondary hover:text-secondary-content hover:scale-105 transition duration-150"
                 />
               </Link>
             </li>
@@ -39,7 +39,7 @@ export default function DeveloperHero() {
               >
                 <FontAwesomeIcon
                   icon={faLinkedin}
-                  className="h-16 w-16 bg-primary text-primary-content p-2 rounded-lg hover:bg-secondary hover:text-secondary-content hover:scale-105 transition duration-150"
+                  className=" h-12 w-12 md:h-16 md:w-16 bg-primary text-primary-content p-2 rounded-lg hover:bg-secondary hover:text-secondary-content hover:scale-105 transition duration-150"
                 />
               </Link>
             </li>
@@ -50,7 +50,7 @@ export default function DeveloperHero() {
                 className="tooltip tooltip-bottom tooltip-info"
                 data-tip="Resume"
               >
-                <DocumentTextIcon className="h-16 w-16 bg-primary text-primary-content p-2 rounded-lg hover:bg-secondary hover:text-secondary-content hover:scale-105 transition duration-150" />
+                <DocumentTextIcon className=" h-12 w-12 md:h-16 md:w-16 bg-primary text-primary-content p-2 rounded-lg hover:bg-secondary hover:text-secondary-content hover:scale-105 transition duration-150" />
               </Link>
             </li>
           </ul>

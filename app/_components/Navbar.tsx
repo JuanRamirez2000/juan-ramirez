@@ -7,8 +7,9 @@ import {
   Bars3CenterLeftIcon,
 } from "@heroicons/react/24/outline";
 import Link from "next/link";
-import ThemeSwitcher from "./ThemeSwitcher";
+//import ThemeSwitcher from "./MultiThemeSwitcher";
 import { usePathname } from "next/navigation";
+import DarkLightModeSwitch from "./DarkLightModeSwitch";
 
 export default function Navbar() {
   const pathName = usePathname();
@@ -105,7 +106,7 @@ export default function Navbar() {
         </ul>
       </div>
       <div className="navbar-end">
-        <ThemeSwitcher />
+        <DarkLightModeSwitch />
       </div>
     </div>
   );
