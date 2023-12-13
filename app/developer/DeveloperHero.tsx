@@ -59,7 +59,7 @@ export default function DeveloperHero() {
           <div className="relative h-48 w-48 md:h-96 md:w-96">
             <Image
               src={"/assets/hero-content/hero-image.webp"}
-              className="aspect-square object-cover rounded-full"
+              className="aspect-square object-cover  mask mask-hexagon"
               alt="Programming hero icon"
               fill
             />
