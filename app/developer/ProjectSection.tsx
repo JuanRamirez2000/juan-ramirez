@@ -40,7 +40,7 @@ export default function ProjectSection() {
                 ${
                   selectedProject.id === project.id
                     ? "bg-primary text-primary-content row-span-2 col-span-1 md:row-span-full"
-                    : "bg-neutral text-neutral-content md:col-start-2 col-span-1 row-span-1 "
+                    : "hover:bg-secondary hover:text-secondary-content bg-neutral text-neutral-content md:col-start-2 col-span-1 row-span-1 cursor-pointer"
                 }
                 `}
               onClick={() => setSelectedProject(project)}
@@ -62,6 +62,18 @@ export default function ProjectSection() {
               >
                 {project.description}
               </p>
+              <ul className="flex flex-row flex-wrap items-center gap-1">
+                {project.badges?.map((badge, index) => (
+                  <p
+                    key={index}
+                    className={`px-1.5 py-0.5 rounded-2xl ${grabBadgeColorFromVariant(
+                      badge.variant
+                    )}`}
+                  >
+                    {badge.name}
+                  </p>
+                ))}
+              </ul>
             </motion.li>
           ))}
         </ul>
@@ -69,6 +81,17 @@ export default function ProjectSection() {
     </div>
   );
 }
+
+const grabBadgeColorFromVariant = (variant: string) => {
+  switch (variant) {
+    case "Frontend":
+      return "bg-info text-info-content";
+    case "Backend":
+      return "bg-warning text-warning-content";
+    case "Infra":
+      return "bg-error text-error-content";
+  }
+};
 
 const projectsData: Projects = [
   {
