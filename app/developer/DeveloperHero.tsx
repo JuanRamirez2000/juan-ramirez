@@ -3,6 +3,7 @@ import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { DocumentTextIcon } from "@heroicons/react/24/outline";
+import profilePic from "../../public/assets/hero-content/hero-image.webp";
 
 export default function DeveloperHero() {
   return (
@@ -23,6 +24,7 @@ export default function DeveloperHero() {
                 target="_blank"
                 className="tooltip tooltip-bottom tooltip-info"
                 data-tip="Github"
+                aria-label="Github link"
               >
                 <FontAwesomeIcon
                   icon={faGithub}
@@ -36,6 +38,7 @@ export default function DeveloperHero() {
                 target="_blank"
                 className="tooltip tooltip-bottom tooltip-info"
                 data-tip="LinkedIn"
+                aria-label="LinkedIn link"
               >
                 <FontAwesomeIcon
                   icon={faLinkedin}
@@ -49,6 +52,7 @@ export default function DeveloperHero() {
                 target="_blank"
                 className="tooltip tooltip-bottom tooltip-info"
                 data-tip="Resume"
+                aria-label="Resume link"
               >
                 <DocumentTextIcon className=" h-12 w-12 md:h-16 md:w-16 bg-primary text-primary-content p-2 rounded-lg hover:bg-secondary hover:text-secondary-content hover:scale-105 transition duration-150" />
               </Link>
@@ -58,7 +62,7 @@ export default function DeveloperHero() {
         <div className="w-full h-1/3 lg:w-1/2 lg:h-full flex flex-col items-center justify-center">
           <div className="relative h-48 w-48 md:h-96 md:w-96">
             <Image
-              src={"/assets/hero-content/hero-image.webp"}
+              src={profilePic}
               className="aspect-square object-cover  mask mask-hexagon"
               alt="Programming hero icon"
               fill

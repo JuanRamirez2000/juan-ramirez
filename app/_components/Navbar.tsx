@@ -28,6 +28,7 @@ export default function Navbar() {
             <li>
               <Link
                 href={"/developer"}
+                aria-label="Developer portfolio"
                 className={`flex flex-row ${
                   pathName === "/developer"
                     ? "border-l-2 border-secondary rounded-l-none"
@@ -41,6 +42,7 @@ export default function Navbar() {
             <li>
               <Link
                 href={"/photographer"}
+                aria-label="Photographer portfolio"
                 className={`flex flex-row ${
                   pathName === "/photographer"
                     ? "border-l-2 border-secondary rounded-l-none"
@@ -54,6 +56,7 @@ export default function Navbar() {
             <li>
               <Link
                 href={"/assets/files/resume.pdf"}
+                aria-label="Resume"
                 className="flex flex-row"
                 target="_blank"
               >
@@ -70,6 +73,7 @@ export default function Navbar() {
           <li>
             <Link
               href={"/developer"}
+              aria-label="Photographer portfolio"
               className={`tooltip tooltip-bottom ${
                 pathName === "/developer"
                   ? "border-b-2 border-secondary rounded-b-none"
@@ -83,6 +87,7 @@ export default function Navbar() {
           <li className="relative">
             <Link
               href={"/photographer"}
+              aria-label="Photographer portfolio"
               className={`tooltip tooltip-bottom ${
                 pathName === "/photographer"
                   ? "border-b-2 border-secondary rounded-b-none"
@@ -96,6 +101,7 @@ export default function Navbar() {
           <li>
             <Link
               href={"/assets/files/resume.pdf"}
+              aria-label="Resume"
               className="tooltip tooltip-bottom"
               data-tip="resume"
               target="_blank"

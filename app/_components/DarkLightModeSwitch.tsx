@@ -3,7 +3,12 @@ import { MoonIcon, SunIcon } from "@heroicons/react/24/outline";
 export default function DarkLightModeSwitch() {
   return (
     <label className="swap swap-rotate transition-all hover:scale-110">
-      <input type="checkbox" className="theme-controller" value="pastel" />
+      <input
+        type="checkbox"
+        className="theme-controller"
+        value="pastel"
+        aria-label="theme-switch"
+      />
 
       <SunIcon className="h-11 w-11 text-current swap-on p-2 bg-secondary rounded-lg" />
 

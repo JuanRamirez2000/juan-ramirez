@@ -74,14 +74,14 @@ export default function ProjectSection() {
               </p>
               <ul className="flex flex-row flex-wrap items-center gap-1">
                 {project.badges?.map((badge, index) => (
-                  <p
+                  <li
                     key={index}
                     className={`text-sm md:text-base px-1.5 py-0.5 rounded-2xl ${grabBadgeColorFromVariant(
                       badge.variant
                     )}`}
                   >
                     {badge.name}
-                  </p>
+                  </li>
                 ))}
               </ul>
             </motion.li>
