@@ -12,6 +12,7 @@ import {
 import Link from "next/link";
 import { GlobeAltIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
+import ThemeToggleSwitch from "./components/ThemeToggleSwitch";
 
 export default function Home() {
   return (
@@ -218,7 +219,8 @@ export default function Home() {
         </article>
       </section>
       <section className="w-full lg:w-2/5 h-full flex flex-col gap-4 bg-neutral text-neutral-content px-4 py-8 lg:py-0">
-        <article className="flex flex-col w-full justify-center text-center lg:text-start">
+        <article className="flex flex-col w-full justify-center text-center lg:text-start relative">
+          <ThemeToggleSwitch />
           <h1 className="text-7xl font-light">
             Juan <br /> Ramirez
           </h1>
