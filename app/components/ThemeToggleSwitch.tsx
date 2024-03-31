@@ -12,6 +12,16 @@ export default function ThemeToggleSwitch() {
     setMounted(true);
   }, []);
 
+  const toggleTheme = () => {
+    setTheme(theme === "dark" ? "light" : "dark");
+  };
+
+  useEffect(() => {
+    document
+      .querySelector("html")
+      ?.setAttribute("data-theme", theme === "dark" ? "autumn" : "forest");
+  }, [theme]);
+
   if (!mounted) return null;
 
   return (
@@ -21,12 +31,7 @@ export default function ThemeToggleSwitch() {
         id="toggle-light"
         className="toggle-light sr-only"
         checked={theme === "light"}
-        onChange={() => {
-          if (theme === "dark") {
-            return setTheme("light");
-          }
-          return setTheme("dark");
-        }}
+        onChange={toggleTheme}
       />
       <label className="relative z-50 cursor-pointer" htmlFor="toggle-light">
         <Transition
@@ -38,7 +43,7 @@ export default function ThemeToggleSwitch() {
           leaveFrom="opacity-100 rotate-0 scale-100 "
           leaveTo="opacity-0 scale-95 "
         >
-          <SunIcon className={`h-10 w-10 dark:hidden`} />
+          <SunIcon className={`h-10 w-10`} />
         </Transition>
         <Transition
           show={theme === "dark"}
@@ -49,7 +54,7 @@ export default function ThemeToggleSwitch() {
           leaveFrom="opacity-100 rotate-0 scale-100 "
           leaveTo="opacity-0 scale-95 "
         >
-          <MoonIcon className="hidden h-10 w-10 dark:block" />
+          <MoonIcon className="h-10 w-10" />
         </Transition>
       </label>
     </div>
