@@ -12,13 +12,13 @@ export default async function Page() {
     });
 
   return (
-    <section className="w-full h-full overflow-y-hidden flex flex-col items-center justify-center">
-      <div className="h-fit max-h-fit w-screen flex flex-row flex-nowrap gap-10 ">
+    <section className="w-screen h-fit lg:h-full flex flex-col items-center justify-center lg:overflow-y-hidden">
+      <div className="h-fit w-full flex-col flex items-center lg:items-start py-24 lg:py-0 lg:flex-row gap-10 lg:pl-[20rem]">
         {images.map((image) => {
           return (
             <div
               key={image.public_id}
-              className="relative w-[40rem] shrink-0 h-[46rem]"
+              className="relative w-5/6 lg:w-[40rem] shrink-0 h-96 lg:h-[46rem] shadow-primary shadow-2xl"
             >
               <CldImageWrapper
                 src={image.url}
