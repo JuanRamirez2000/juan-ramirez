@@ -1,7 +1,9 @@
 import {
   AcademicCapIcon,
   BriefcaseIcon,
+  CameraIcon,
   CodeBracketIcon,
+  GlobeAltIcon,
 } from "@heroicons/react/24/outline";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -10,7 +12,6 @@ import {
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 import Link from "next/link";
-import { GlobeAltIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import ThemeToggleSwitch from "./components/ThemeToggleSwitch";
 
@@ -281,6 +282,11 @@ export default function Home() {
                     icon={faInstagram}
                     className="size-10 text-accent"
                   />
+                </Link>
+              </li>
+              <li className="hover:scale-125 transition-all duration-150">
+                <Link href={"/photography"} target="_blank">
+                  <CameraIcon className="size-10 text-accent" />
                 </Link>
               </li>
             </ul>
