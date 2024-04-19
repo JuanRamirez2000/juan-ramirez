@@ -17,7 +17,7 @@ import ThemeToggleSwitch from "./components/ThemeToggleSwitch";
 
 export default function Home() {
   return (
-    <main className="w-screen lg:w-[64rem] lg:h-screen h-fit flex flex-col-reverse lg:flex-row">
+    <main className="w-screen lg:w-[64rem] lg:h-screen h-fit flex flex-col-reverse lg:flex-row  justify-center items-center">
       <section className="w-full lg:w-3/5 h-full flex flex-col gap-2.5 px-4 py-8 lg:py-0 lg:pt-10">
         <article>
           <h2 className="text-3xl font-medium flex items-center">
