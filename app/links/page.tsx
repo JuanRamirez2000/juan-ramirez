@@ -31,7 +31,7 @@ export default function Links() {
           <ul className="flex flex-col w-3/4 max-w-5xl gap-4 text-2xl">
             <li className="px-3 py-1 transition-all rounded-2xl bg-slate-100 hover:scale-105">
               <Link
-                href={"https://www.instagram.com/tinavivix/"}
+                href={"https://www.instagram.com/juan_r_photos/"}
                 className="flex flex-row items-center justify-between text-center "
                 aria-label="Instagram Link"
                 target="_blank"
