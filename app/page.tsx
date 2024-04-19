@@ -19,13 +19,13 @@ export default function Home() {
     <main className="w-screen lg:w-[64rem] lg:h-screen h-fit flex flex-col-reverse lg:flex-row">
       <section className="w-full lg:w-3/5 h-full flex flex-col gap-2.5 px-4 py-8 lg:py-0 lg:pt-10">
         <article>
-          <h2 className="text-2xl font-medium flex items-center">
+          <h2 className="text-3xl font-medium flex items-center">
             Education
-            <span className="inline-flex px-2">
+            <span className="inline-flex ml-2">
               <AcademicCapIcon className="size-7" />
             </span>
           </h2>
-          <div className="pt-2">
+          <div>
             <h3 className="text-lg font-medium text-primary">
               Bachelors in Science, Computer Science
             </h3>
@@ -33,13 +33,13 @@ export default function Home() {
           </div>
         </article>
         <article>
-          <h2 className="text-2xl font-medium flex items-center">
+          <h2 className="text-3xl font-medium flex items-center pt-4">
             Experience
-            <span className="inline-flex px-2">
+            <span className="inline-flex ml-2">
               <BriefcaseIcon className="size-7" />
             </span>
           </h2>
-          <ul className="pt-2 flex flex-col gap-4 w-4/5">
+          <ul className="flex flex-col gap-3 w-4/5">
             <li>
               <h3 className="text-lg font-medium text-primary">
                 Lead Frontend Web Developer
@@ -50,7 +50,7 @@ export default function Home() {
                 revolving around user analytics, and helped refactor a code base
                 to use modern tooling.
               </p>
-              <ul className="flex flex-row gap-1 flex-wrap">
+              <ul className="flex flex-row gap-1 flex-wrap pt-1">
                 <li className="badge badge-outline badge-primary">NextJS</li>
                 <li className="badge badge-outline badge-primary">ReactJS</li>
                 <li className="badge badge-outline badge-primary">ExpressJS</li>
@@ -78,7 +78,7 @@ export default function Home() {
                 search feature that pulled info from a ticket and presented
                 relevant tickets, notes, and information saved by the company.
               </p>
-              <ul className="flex flex-row gap-1 flex-wrap">
+              <ul className="flex flex-row gap-1 flex-wrap pt-1">
                 <li className="badge badge-outline badge-primary">NextJS</li>
                 <li className="badge badge-outline badge-primary">ReactJS</li>
                 <li className="badge badge-outline badge-primary">
@@ -105,7 +105,7 @@ export default function Home() {
                 to create an evolutionary algorithm focused on placing heat
                 sensor nodes within any region of the US.
               </p>
-              <ul className="flex flex-row gap-1 flex-wrap">
+              <ul className="flex flex-row gap-1 flex-wrap pt-1">
                 <li className="badge badge-outline badge-primary">MATLAB</li>
                 <li className="badge badge-outline badge-primary">Python</li>
                 <li className="badge badge-outline badge-primary">ArcGIS</li>
@@ -117,13 +117,13 @@ export default function Home() {
           </ul>
         </article>
         <article>
-          <h2 className="text-2xl font-medium flex items-center">
+          <h2 className="text-3xl font-medium flex items-center pt-4">
             Projects
-            <span className="inline-flex px-2">
+            <span className="inline-flex ml-2">
               <CodeBracketIcon className="size-7" />
             </span>
           </h2>
-          <ul className="flex flex-col gap-4 w-4/5 pt-2">
+          <ul className="flex flex-col gap-4 w-4/5 ">
             <li>
               <h3 className="text-lg font-medium text-primary inline-flex items-center gap-1">
                 Roadtrip Music
@@ -150,7 +150,7 @@ export default function Home() {
                 Spotify Web API to create a playlist that fits the time taken to
                 go from a starting point towards a destination.
               </p>
-              <ul className="flex flex-row gap-1 flex-wrap">
+              <ul className="flex flex-row gap-1 flex-wrap pt-1">
                 <li className="badge badge-outline badge-primary">NextJS</li>
                 <li className="badge badge-outline badge-primary">ReactJS</li>
                 <li className="badge badge-outline badge-primary">
@@ -198,9 +198,11 @@ export default function Home() {
               </h3>
               <p>
                 A modeling portfolio and custom &apos;LinkTree&apos; for a model
-                local to Southern California
+                local to Southern California. The site also includes a custom
+                admin dashboard used to add, remove, change, and edit site
+                images to the model&apos;s liking.
               </p>
-              <ul className="flex flex-row gap-1 flex-wrap">
+              <ul className="flex flex-row gap-1 flex-wrap pt-1">
                 <li className="badge badge-outline badge-primary">NextJS</li>
                 <li className="badge badge-outline badge-primary">ReactJS</li>
                 <li className="badge badge-outline badge-primary">
@@ -209,10 +211,17 @@ export default function Home() {
                 <li className="badge badge-outline badge-primary">
                   TailwdinCSS
                 </li>
+                <li className="badge badge-outline badge-primary">ShadCnUI</li>
                 <li className="badge badge-outline badge-primary">
                   Cloudinary
                 </li>
+                <li className="badge badge-outline badge-primary">
+                  DrizzleORM
+                </li>
                 <li className="badge badge-outline badge-primary">Vercel</li>
+                <li className="badge badge-outline badge-primary">
+                  Vercel Postgres
+                </li>
               </ul>
             </li>
           </ul>
@@ -293,6 +302,9 @@ export default function Home() {
             </li>
             <li>
               <p>Spanish</p>
+            </li>
+            <li>
+              <p>Vietnamese (Learning)</p>
             </li>
           </ul>
         </article>
