@@ -19,7 +19,7 @@ export default function ThemeToggleSwitch() {
   useEffect(() => {
     document
       .querySelector("html")
-      ?.setAttribute("data-theme", theme === "dark" ? "autumn" : "forest");
+      ?.setAttribute("data-theme", theme === "dark" ? "autumn" : "dark");
   }, [theme]);
 
   if (!mounted) return null;

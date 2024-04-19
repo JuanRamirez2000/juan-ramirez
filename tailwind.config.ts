@@ -16,8 +16,8 @@ const config: Config = {
     },
   },
   daisyui: {
-    themes: ["autumn", "forest"],
-    darkTheme: "forest",
+    themes: ["autumn", "dark"],
+    darkTheme: "dark",
   },
   plugins: [require("daisyui"), require("tailwindcss-hero-patterns")],
 };
