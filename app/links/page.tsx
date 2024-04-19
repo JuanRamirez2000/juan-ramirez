@@ -64,7 +64,7 @@ export default function Links() {
             </li>
             <li className="px-3 py-1 transition-all rounded-2xl bg-slate-100 hover:scale-105">
               <Link
-                href={"https://www.instagram.com/tinavivix/"}
+                href={"https://www.linkedin.com/in/juanramirez2000/"}
                 className="flex flex-row items-center justify-between text-center "
                 aria-label="Instagram Link"
                 target="_blank"
@@ -100,7 +100,9 @@ export default function Links() {
             </li>
             <li className="px-3 py-1 transition-all rounded-2xl bg-slate-100 hover:scale-105">
               <Link
-                href={"https://www.instagram.com/tinavivix/"}
+                href={
+                  "https://open.spotify.com/user/12139070956?si=d527f68a3af14078"
+                }
                 className="flex flex-row items-center justify-between text-center "
                 aria-label="Instagram Link"
                 target="_blank"
