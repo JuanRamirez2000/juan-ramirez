@@ -12,18 +12,15 @@ export default function ThemeToggleSwitch() {
     setMounted(true);
   }, []);
 
-  const toggleTheme = () => {
-    setTheme(theme === "dark" ? "light" : "dark");
-  };
-
   useEffect(() => {
     document
       .querySelector("html")
       ?.setAttribute("data-theme", theme === "dark" ? "autumn" : "dark");
   }, [theme]);
+
   if (!mounted) return null;
   return (
-    <div className="absolute right-4 top-2 z-50">
+    <div className="absolute right-4 top-2">
       <input
         type="checkbox"
         id="toggle-light"
@@ -46,7 +43,7 @@ export default function ThemeToggleSwitch() {
           leaveFrom="opacity-100 rotate-0 scale-100 "
           leaveTo="opacity-0 scale-95 "
         >
-          <SunIcon className={`h-10 w-10 dark:hidden`} />
+          <SunIcon className={`h-10 w-10 z-40 dark:hidden block`} />
         </Transition>
         <Transition
           show={theme === "dark"}
@@ -57,7 +54,7 @@ export default function ThemeToggleSwitch() {
           leaveFrom="opacity-100 rotate-0 scale-100 "
           leaveTo="opacity-0 scale-95 "
         >
-          <MoonIcon className="hidden h-10 w-10 dark:block" />
+          <MoonIcon className="hidden z-40 h-10 w-10 dark:block" />
         </Transition>
       </label>
     </div>
