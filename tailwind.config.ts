@@ -22,6 +22,7 @@ const config: Config = {
     themes: ["autumn", "dark", "pastel"],
     darkTheme: "dark",
   },
+  darkMode: "class",
   plugins: [require("daisyui"), require("tailwindcss-hero-patterns")],
 };
 export default config;

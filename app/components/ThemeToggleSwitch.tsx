@@ -21,19 +21,22 @@ export default function ThemeToggleSwitch() {
       .querySelector("html")
       ?.setAttribute("data-theme", theme === "dark" ? "autumn" : "dark");
   }, [theme]);
-
   if (!mounted) return null;
-
   return (
-    <div className="absolute z-50 top-5 right-10">
+    <div className="absolute right-4 top-2 z-50">
       <input
         type="checkbox"
         id="toggle-light"
         className="toggle-light sr-only"
         checked={theme === "light"}
-        onChange={toggleTheme}
+        onChange={() => {
+          if (theme === "dark") {
+            return setTheme("light");
+          }
+          return setTheme("dark");
+        }}
       />
-      <label className="z-50 cursor-pointer" htmlFor="toggle-light">
+      <label className="relative z-50 cursor-pointer" htmlFor="toggle-light">
         <Transition
           show={theme === "light"}
           enter="transform transition duration-[400ms]"
@@ -43,7 +46,7 @@ export default function ThemeToggleSwitch() {
           leaveFrom="opacity-100 rotate-0 scale-100 "
           leaveTo="opacity-0 scale-95 "
         >
-          <SunIcon className={`h-10 w-10`} />
+          <SunIcon className={`h-10 w-10 dark:hidden`} />
         </Transition>
         <Transition
           show={theme === "dark"}
@@ -54,7 +57,7 @@ export default function ThemeToggleSwitch() {
           leaveFrom="opacity-100 rotate-0 scale-100 "
           leaveTo="opacity-0 scale-95 "
         >
-          <MoonIcon className="h-10 w-10 " />
+          <MoonIcon className="hidden h-10 w-10 dark:block" />
         </Transition>
       </label>
     </div>
