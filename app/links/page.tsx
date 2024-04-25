@@ -8,7 +8,11 @@ import {
 import { faChess } from "@fortawesome/free-solid-svg-icons";
 import CldImageWrapper from "../components/CldImageWrapper";
 import Link from "next/link";
-import { HeartIcon, LinkIcon } from "@heroicons/react/24/outline";
+import {
+  HeartIcon,
+  CommandLineIcon,
+  CameraIcon,
+} from "@heroicons/react/24/outline";
 
 const HERO_PAGE_IMAGE_ID = "Juan/d3ygc4wdl9alwjybf4w1";
 
@@ -52,13 +56,31 @@ export default function Links() {
               <Link
                 href={"https://www.juanr.dev"}
                 className="flex flex-row items-center justify-between text-center "
-                aria-label="Instagram Link"
+                aria-label="Coding Link"
                 target="_blank"
               >
-                <LinkIcon className="w-10 h-10 p-1.5 rounded-xl bg-cyan-400 text-white" />
+                <CommandLineIcon className="w-10 h-10 p-1.5 rounded-xl bg-cyan-400 text-white" />
                 <div className="flex flex-col grow">
-                  <p className="text-xl font-semibold">Portfolio</p>
+                  <p className="text-xl font-semibold">
+                    Professional Portfolio
+                  </p>
                   <p className="text-sm text-slate-600">My coding portfolio</p>
+                </div>
+              </Link>
+            </li>
+            <li className="px-3 py-1 transition-all rounded-2xl bg-slate-100 hover:scale-105">
+              <Link
+                href={"https://www.juanr.dev/photography"}
+                className="flex flex-row items-center justify-between text-center "
+                aria-label="Photography Link"
+                target="_blank"
+              >
+                <CameraIcon className="w-10 h-10 p-1.5 rounded-xl bg-cyan-400 text-white" />
+                <div className="flex flex-col grow">
+                  <p className="text-xl font-semibold">Creative Portfolio</p>
+                  <p className="text-sm text-slate-600">
+                    My photography portfolio
+                  </p>
                 </div>
               </Link>
             </li>
@@ -66,7 +88,7 @@ export default function Links() {
               <Link
                 href={"https://www.linkedin.com/in/juanramirez2000/"}
                 className="flex flex-row items-center justify-between text-center "
-                aria-label="Instagram Link"
+                aria-label="LinkedIn Link"
                 target="_blank"
               >
                 <FontAwesomeIcon
@@ -83,7 +105,7 @@ export default function Links() {
               <Link
                 href={"https://github.com/JuanRamirez2000"}
                 className="flex flex-row items-center justify-between text-center "
-                aria-label="Instagram Link"
+                aria-label="Github Link"
                 target="_blank"
               >
                 <FontAwesomeIcon
@@ -104,7 +126,7 @@ export default function Links() {
                   "https://open.spotify.com/user/12139070956?si=d527f68a3af14078"
                 }
                 className="flex flex-row items-center justify-between text-center "
-                aria-label="Instagram Link"
+                aria-label="Spotify Link"
                 target="_blank"
               >
                 <FontAwesomeIcon
@@ -121,7 +143,7 @@ export default function Links() {
               <Link
                 href={"https://www.chess.com/member/promking2000"}
                 className="flex flex-row items-center justify-between text-center "
-                aria-label="Instagram Link"
+                aria-label="Chess Link"
                 target="_blank"
               >
                 <FontAwesomeIcon
