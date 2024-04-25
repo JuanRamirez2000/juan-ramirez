@@ -230,7 +230,7 @@ export default function Home() {
       </section>
       <section className="w-full lg:w-2/5 h-full flex flex-col gap-4 bg-neutral text-neutral-content px-4 py-8 lg:py-0 lg:pt-10 bg-repeat heropattern-rain-current/10">
         <article className="flex flex-col w-full justify-center text-center lg:text-start relative">
-          <div className="z-50">
+          <div className="z-50 relative">
             <ThemeToggleSwitch />
           </div>
           <h1 className="text-7xl font-light">
