@@ -2,8 +2,10 @@ import NavSection from "./NavSection";
 
 export default function PhotographyLayout({
   children,
+  photoModal,
 }: Readonly<{
   children: React.ReactNode;
+  photoModal: React.ReactNode;
 }>) {
   return (
     <main
@@ -12,6 +14,7 @@ export default function PhotographyLayout({
     >
       <NavSection />
       {children}
+      {photoModal}
     </main>
   );
 }

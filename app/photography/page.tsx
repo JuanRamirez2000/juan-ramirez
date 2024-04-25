@@ -1,6 +1,7 @@
 import cloudinary from "cloudinary";
 import { ResourceApiResponse } from "cloudinary";
 import CldImageWrapper from "../components/CldImageWrapper";
+import ImageModal from "./ImageModal";
 
 export default async function Page() {
   const { resources: images }: { resources: ResourceApiResponse["resources"] } =
@@ -18,13 +19,15 @@ export default async function Page() {
           return (
             <div
               key={image.public_id}
-              className="relative w-5/6 lg:w-[40rem] shrink-0 h-96 lg:h-[46rem] shadow-primary shadow-2xl"
+              className="relative w-5/6 lg:w-[52rem] shrink-0 h-96 lg:h-[56rem] shadow-primary shadow-2xl"
             >
+              <ImageModal imageUrl={image.url} />
               <CldImageWrapper
                 src={image.url}
                 alt=""
                 fill
-                className="object-cover rounded-md"
+                sizes="100vw"
+                className="object-cover rounded-md "
               />
             </div>
           );
