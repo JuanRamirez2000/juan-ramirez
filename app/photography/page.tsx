@@ -19,7 +19,7 @@ export default async function Page() {
           return (
             <div
               key={image.public_id}
-              className="relative w-5/6 lg:w-[52rem] shrink-0 h-96 lg:h-[56rem] shadow-primary shadow-2xl"
+              className="relative w-5/6 lg:w-[38rem] shrink-0 h-96 lg:h-[52rem] shadow-primary shadow-2xl"
             >
               <ImageModal imageUrl={image.url} />
               <CldImageWrapper

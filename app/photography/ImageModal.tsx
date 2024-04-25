@@ -3,7 +3,10 @@
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useState } from "react";
 import CldImageWrapper from "../components/CldImageWrapper";
-import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
+import {
+  ArrowTopRightOnSquareIcon,
+  XCircleIcon,
+} from "@heroicons/react/24/outline";
 
 export default function ImageModal({ imageUrl }: { imageUrl: string }) {
   const [openImageModal, setOpenImageModal] = useState<boolean>(false);
@@ -46,6 +49,9 @@ export default function ImageModal({ imageUrl }: { imageUrl: string }) {
                 leaveTo="opacity-0 scale-95"
               >
                 <Dialog.Panel className="w-full max-w-3xl transform overflow-hidden rounded-2xl bg-base-100 p-6 text-left align-middle shadow-xl transition-all h-[38rem] lg:h-[64rem] relative">
+                  <button onClick={closeModal}>
+                    <XCircleIcon className="absolute size-8 lg:size-10 z-10 bg-error rounded-md p-1 top-2 right-2 cursor-pointer hover:scale-110 duration-150 text-error-content" />
+                  </button>
                   <CldImageWrapper
                     src={imageUrl}
                     alt=""
