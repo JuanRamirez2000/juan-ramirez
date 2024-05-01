@@ -3,12 +3,17 @@
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useState } from "react";
 import CldImageWrapper from "../components/CldImageWrapper";
+import { ResourceApiResponse } from "cloudinary";
 import {
   ArrowTopRightOnSquareIcon,
   XCircleIcon,
 } from "@heroicons/react/24/outline";
 
-export default function ImageModal({ imageUrl }: { imageUrl: string }) {
+export default function ImageModal({
+  image,
+}: {
+  image: ResourceApiResponse["resources"][0];
+}) {
   const [openImageModal, setOpenImageModal] = useState<boolean>(false);
 
   function openModal() {
@@ -37,8 +42,8 @@ export default function ImageModal({ imageUrl }: { imageUrl: string }) {
             <div className="fixed inset-0 bg-black/80" />
           </Transition.Child>
 
-          <div className="fixed inset-0 overflow-y-auto">
-            <div className="flex min-h-full items-center justify-center p-4 text-center">
+          <div className="fixed inset-0 overflow-y-auto h-fit">
+            <div className="flex min-h-full items-center justify-center p-4 text-center h-fit">
               <Transition.Child
                 as={Fragment}
                 enter="ease-out duration-300"
@@ -53,7 +58,7 @@ export default function ImageModal({ imageUrl }: { imageUrl: string }) {
                     <XCircleIcon className="absolute size-8 lg:size-10 z-10 bg-error rounded-md p-1 top-2 right-2 cursor-pointer hover:scale-110 duration-150 text-error-content" />
                   </button>
                   <CldImageWrapper
-                    src={imageUrl}
+                    src={image.url}
                     alt=""
                     fill
                     sizes="100vw"

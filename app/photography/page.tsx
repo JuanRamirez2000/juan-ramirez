@@ -13,26 +13,26 @@ export default async function Page() {
     });
 
   return (
-    <section className="w-screen h-fit lg:h-full flex flex-col items-center justify-center lg:overflow-y-hidden">
-      <div className="h-fit w-full flex-col flex items-center lg:items-start py-24 lg:py-0 lg:flex-row gap-10 lg:pl-[20rem]">
-        {images.map((image) => {
-          return (
-            <div
-              key={image.public_id}
-              className="relative w-5/6 lg:w-[38rem] shrink-0 h-96 lg:h-[52rem] shadow-primary shadow-2xl"
-            >
-              <ImageModal imageUrl={image.url} />
-              <CldImageWrapper
-                src={image.url}
-                alt=""
-                fill
-                sizes="100vw"
-                className="object-cover rounded-md "
-              />
-            </div>
-          );
-        })}
-      </div>
+    <section className="w-[90%] h-fit columns-2 md:columns-3 2xl:columns-4 first:mt-0 ">
+      {images.map((image) => {
+        return (
+          <div className="relative" key={image.public_id}>
+            <CldImageWrapper
+              src={image.url}
+              alt=""
+              height={image.height}
+              width={image.width}
+              sizes="100vw"
+              className="object-cover shadow-lg rounded-xl  first:mt-0 my-1"
+            />
+            <ImageModal image={image} />
+          </div>
+        );
+      })}
     </section>
   );
+}
+
+{
+  /* <ImageModal imageUrl={image.url} />*/
 }
