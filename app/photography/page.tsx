@@ -9,7 +9,7 @@ export default async function Page() {
       resource_type: "image",
       prefix: "Juan/",
       type: "upload",
-      max_results: 25,
+      max_results: 50,
     });
 
   return (
