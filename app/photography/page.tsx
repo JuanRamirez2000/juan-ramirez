@@ -13,7 +13,7 @@ export default async function Page() {
     });
 
   return (
-    <section className="w-[90%] h-fit columns-2 md:columns-3 2xl:columns-4 first:mt-0 ">
+    <section className="w-[90%] h-fit columns-2 md:columns-3 2xl:columns-4 ">
       {images.map((image) => {
         return (
           <div className="relative" key={image.public_id}>
@@ -23,7 +23,7 @@ export default async function Page() {
               height={image.height}
               width={image.width}
               sizes="100vw"
-              className="object-cover shadow-lg rounded-xl first:mt-0 my-1"
+              className="object-cover shadow-lg rounded-xl my-1"
             />
             <ImageModal image={image} />
           </div>
