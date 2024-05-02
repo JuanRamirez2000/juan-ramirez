@@ -26,7 +26,7 @@ export default function ImageModal({
   return (
     <>
       <button onClick={openModal}>
-        <ArrowTopRightOnSquareIcon className="absolute size-8 z-10 text-neutral bg-base-100 rounded-md p-1.5 top-2 right-2 cursor-pointer hover:scale-110 duration-150" />
+        <ArrowTopRightOnSquareIcon className="absolute size-6 lg:size-8 z-10 text-neutral bg-base-100 rounded-md p-1 lg:p-1.5 top-2 right-2 cursor-pointer hover:scale-110 duration-150" />
       </button>
       <Transition appear show={openImageModal} as={Fragment}>
         <Dialog as="div" className="relative z-30" onClose={closeModal}>
