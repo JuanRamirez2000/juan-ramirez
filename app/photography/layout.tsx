@@ -11,7 +11,7 @@ export default function PhotographyLayout({
       data-theme="pastel"
     >
       <NavSection />
-      <div className="h-full py-24 lg:py-12 w-full grow flex flex-col items-center overflow-auto">
+      <div className="h-full py-24 lg:py-12 w-full grow flex flex-col items-center overflow-auto px-10">
         {children}
       </div>
     </main>

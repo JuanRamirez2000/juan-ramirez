@@ -13,7 +13,7 @@ export default async function Page() {
     });
 
   return (
-    <section className="w-[90%] h-fit columns-2 md:columns-3 2xl:columns-4 ">
+    <section className="w-full h-fit columns-2 md:columns-3 2xl:columns-4 ">
       {images.map((image) => {
         return (
           <div className="relative" key={image.public_id}>
