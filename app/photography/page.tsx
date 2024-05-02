@@ -23,7 +23,7 @@ export default async function Page() {
               height={image.height}
               width={image.width}
               sizes="100vw"
-              className="object-cover shadow-lg rounded-xl  first:mt-0 my-1"
+              className="object-cover shadow-lg rounded-xl first:mt-0 my-1"
             />
             <ImageModal image={image} />
           </div>
@@ -31,8 +31,4 @@ export default async function Page() {
       })}
     </section>
   );
-}
-
-{
-  /* <ImageModal imageUrl={image.url} />*/
 }

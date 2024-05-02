@@ -26,7 +26,7 @@ export default function ImageModal({
   return (
     <>
       <button onClick={openModal}>
-        <ArrowTopRightOnSquareIcon className="absolute size-8 lg:size-10 z-10 text-neutral bg-base-100 rounded-md p-2 top-2 right-2 cursor-pointer hover:scale-110 duration-150" />
+        <ArrowTopRightOnSquareIcon className="absolute size-8 z-10 text-neutral bg-base-100 rounded-md p-1.5 top-2 right-2 cursor-pointer hover:scale-110 duration-150" />
       </button>
       <Transition appear show={openImageModal} as={Fragment}>
         <Dialog as="div" className="relative z-30" onClose={closeModal}>
@@ -42,7 +42,7 @@ export default function ImageModal({
             <div className="fixed inset-0 bg-black/80" />
           </Transition.Child>
 
-          <div className="fixed inset-0 overflow-y-auto h-fit">
+          <div className="fixed inset-0 overflow-y-auto">
             <div className="flex min-h-full items-center justify-center p-4 text-center h-fit">
               <Transition.Child
                 as={Fragment}
@@ -53,14 +53,15 @@ export default function ImageModal({
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="w-full max-w-3xl transform overflow-hidden rounded-2xl bg-base-100 p-6 text-left align-middle shadow-xl transition-all h-[38rem] lg:h-[64rem] relative">
+                <Dialog.Panel className="w-full max-w-4xl transform overflow-hidden rounded-2xl text-left align-middle shadow-xl transition-all relative">
                   <button onClick={closeModal}>
-                    <XCircleIcon className="absolute size-8 lg:size-10 z-10 bg-error rounded-md p-1 top-2 right-2 cursor-pointer hover:scale-110 duration-150 text-error-content" />
+                    <XCircleIcon className="absolute size-8 lg:size-10 z-10 bg-error rounded-md p-1 top-8 right-2 cursor-pointer hover:scale-110 duration-150 text-error-content" />
                   </button>
                   <CldImageWrapper
                     src={image.url}
                     alt=""
-                    fill
+                    height={image.height}
+                    width={image.width}
                     sizes="100vw"
                     className="object-cover rounded-md "
                   />
